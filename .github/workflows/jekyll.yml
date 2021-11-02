@@ -16,8 +16,8 @@ jobs:
     - run: npm install -g @angular/cli
     - run: ng build --prod
     - name: Desplieuge a firebase
-        uses: w9jds/firebase-action@master
-        with:
+      uses: w9jds/firebase-action@master
+      with:
           args: deploy --only hosting
-        env:
+      env:
           FIREBASE_TOKEN: ${{ secrets.TOKEN_MIFIREBASE }}
